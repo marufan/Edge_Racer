@@ -24,6 +24,7 @@ int main() {
     // Audio system initialization
     AudioSystem audio;
     audio.Init();
+    SetMasterVolume(0.2);
 
     // Shadow and Lighting system
     ShadowSystem shadows;
