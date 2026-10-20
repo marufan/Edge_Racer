@@ -394,9 +394,9 @@ void Player::ResolveCollisions(Vector3& pos, Vector3& vel, float eyeH, WorldGene
             isGrounded = true;
 
             // Landing roll / stumble check
-            if (!wasGroundedBefore && vel.y < -7.0f) {
+            if (!wasGroundedBefore) {
                 bool wantRoll = IsKeyDown(KEY_LEFT_CONTROL) || IsKeyDown(KEY_C) || IsMouseButtonDown(MOUSE_BUTTON_RIGHT);
-                if (wantRoll && vel.y < -10.0f) {
+                if (wantRoll) {
                     state = MoveState::ROLLING;
                     rollAnimTimer = 0.50f;
                     forwardMomentum += 2.0f;
