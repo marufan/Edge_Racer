@@ -19,6 +19,7 @@ A fast-paced, high-momentum first-person parkour endless runner inspired by **Mi
 | **Skill Roll** | Hold `Ctrl` / `C` / `Right Click` before hard landing | Roll upon ground impact, eliminating stumble damage and boosting speed |
 | **Springboards** | Run onto red ramps | Automatic massive parabolic launch across wide skyscraper gaps |
 | **Restart** | `R` or `Space` (after crash) | Instant quick-restart |
+| **Pause** | `P` | Pause and unpause the game |
 
 ---
 

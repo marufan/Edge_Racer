@@ -9,7 +9,8 @@
 enum class GameState {
     INTRO,
     PLAYING,
-    GAME_OVER
+    GAME_OVER,
+    PAUSE
 };
 
 int main() {
@@ -66,12 +67,20 @@ int main() {
                 player.Reset({ 0.0f, 2.0f, 5.0f });
                 world.Reset();
             }
+
+            if (IsKeyPressed(KEY_P)) {
+                gameState = GameState::PAUSE;
+            }
         } else if (gameState == GameState::GAME_OVER) {
             if (IsKeyPressed(KEY_SPACE) || IsKeyPressed(KEY_R)) {
                 player.Reset({ 0.0f, 2.0f, 5.0f });
                 world.Reset();
                 gameState = GameState::PLAYING;
                 DisableCursor();
+            }
+        } else if (gameState == GameState::PAUSE) {
+            if (IsKeyPressed(KEY_P)) {
+                gameState = GameState::PLAYING;
             }
         }
 
